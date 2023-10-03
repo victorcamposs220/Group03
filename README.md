@@ -1,2 +1,4 @@
 # Group03
-Grupo dedicado a la practica de semanticaweb and Linked data de la UMP
+Grupo dedicado a la practica de semantic web and Linked data de la UPM
+
+Nerea Romero Peinado; Usuario: Nerea5151
