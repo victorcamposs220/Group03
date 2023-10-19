@@ -1,1 +1,1 @@
-link googel collab: https://colab.research.google.com/drive/1ByFx_NOEfTZeaJ1Wtw3UwTH3H3-Sye2O?usp=sharing#scrollTo=fL5hqV6IWa0b
+link googel collab: https://colab.research.google.com/drive/14s_Mi3rxO9VN38Z1iu7FLO95S9JL-yQv
