@@ -113,7 +113,8 @@
     rr:predicate ns:directionBelongsHood;
     rr:objectMap [
       rr:parentTriplesMap <#TriplesMapHood>
-    ]
+    ];
+
   ].
 
 <#TriplesMapHood> a rr:TriplesMap;
@@ -125,6 +126,13 @@
     rr:template "http://smartcity.linkeddata.es/lcc/resource/Hood/{HoodCanonized}";
     rr:class ns:Hood
   ];
+
+rr:predicateObjectMap [
+    rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ]
+    rr:objectMap [
+      rr:template “same_as_wikidata_hood”;
+      rr:termType rr:IRI ]
+    ];
 
   rr:predicateObjectMap [
     rr:predicate ns:hoodBelongsDistrict;
@@ -141,7 +149,14 @@
   rr:subjectMap [
     rr:template "http://smartcity.linkeddata.es/lcc/resource/District/{District}";
     rr:class ns:District
-  ].
+  ];
+
+rr:predicateObjectMap [
+    rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ]
+    rr:objectMap [
+      rr:template “same_as_wikidata_distrito”;
+      rr:termType rr:IRI ]
+    ].
 
 <#TriplesMapCompany> a rr:TriplesMap;
   rml:logicalSource [
@@ -151,4 +166,11 @@
   rr:subjectMap [
     rr:template "http://smartcity.linkeddata.es/lcc/resource/Company/{Company}";
     rr:class ns:Company
-  ].
+  ];
+
+rr:predicateObjectMap [
+    rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ]
+    rr:objectMap [
+      rr:template “same_as_wikidata_distrito”;
+      rr:termType rr:IRI ]
+    ].
