@@ -89,11 +89,7 @@
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
-<<<<<<< HEAD
     rr:template "http://smartcity.linkeddata.es/lcc/resource/Direction/{DirectionCanonized}";
-=======
-    rr:template "http://smartcity.linkeddata.es/lcc/resource/Direction/{Direction}";
->>>>>>> c73b5c11d4c909d2c6b72d0749a45b4e43c2ba07
     rr:class ns:Direction
   ];
 
@@ -126,11 +122,7 @@
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
-<<<<<<< HEAD
     rr:template "http://smartcity.linkeddata.es/lcc/resource/Hood/{HoodCanonized}";
-=======
-    rr:template "http://smartcity.linkeddata.es/lcc/resource/Hood/{Hood}";
->>>>>>> c73b5c11d4c909d2c6b72d0749a45b4e43c2ba07
     rr:class ns:Hood
   ];
 
