@@ -81,7 +81,7 @@
       rml:reference "Latitude";
       rr:datatype xsd:decimal
     ]
-  ] .
+  ].
 
 <#TriplesMapDirection> a rr:TriplesMap;
   rml:logicalSource [
@@ -171,6 +171,6 @@ rr:predicateObjectMap [
 rr:predicateObjectMap [
     rr:predicateMap [ rr:constant owl:sameAs; rr:termType rr:IRI ]
     rr:objectMap [
-      rr:template “same_as_wikidata_distrito”;
+      rr:template “same_as_wikidata_company”;
       rr:termType rr:IRI ]
     ].
