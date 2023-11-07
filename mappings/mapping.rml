@@ -1,7 +1,12 @@
+<<<<<<< HEAD
+=======
+@base <http://smartcity.linkeddata.es/lcc/resource/> .
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+<<<<<<< HEAD
 @base <http://smartcity.linkeddata.es/lcc/resource/> .
 @prefix ns: <http://smartcity.linkeddata.es/lcc/ontology/BicicletasElectricas#> .
 
@@ -13,13 +18,42 @@
   rr:subjectMap [
     rr:template "http://smartcity.linkeddata.es/lcc/resource/BicycleStation/{ID}";
     rr:class ns:BicycleStation
+=======
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns: <http://smartcity.linkeddata.es/lcc/ontology/BicicletasElectricas#> .
+
+
+
+<#TriplesMapBicycleStation> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "./csv/-updated.csv" ;
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/BicycleStation/{ID}";
+    rr:termType rr:IRI; rr:class ns:BicycleStation;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "ID";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
   ];
 
   rr:predicateObjectMap [
     rr:predicate ns:id;
     rr:objectMap [
       rml:reference "ID";
+<<<<<<< HEAD
       rr:datatype xsd:string
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
@@ -27,35 +61,58 @@
     rr:predicate ns:registrationDate;
     rr:objectMap [
       rml:reference "RegistrationDate";
+<<<<<<< HEAD
       rr:datatype xsd:date
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:date;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
   rr:predicateObjectMap [
     rr:predicate ns:belongsDistrict;
     rr:objectMap [
+<<<<<<< HEAD
       rr:parentTriplesMap <#TriplesMapDistrict>
+=======
+      rr:parentTriplesMap <#TriplesMapDistrict>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
   rr:predicateObjectMap [
+<<<<<<< HEAD
     rr:predicate ns:belongsHood;
     rr:objectMap [
       rr:parentTriplesMap <#TriplesMapHood>
+=======
+    rr:predicate ns:belongsNeigbourhood;
+    rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapHood>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
   rr:predicateObjectMap [
     rr:predicate ns:hasDirection;
     rr:objectMap [
+<<<<<<< HEAD
       rr:parentTriplesMap <#TriplesMapDirection>
+=======
+      rr:parentTriplesMap <#TriplesMapDirection>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
   rr:predicateObjectMap [
     rr:predicate ns:isManageBy;
     rr:objectMap [
+<<<<<<< HEAD
       rr:parentTriplesMap <#TriplesMapCompany>
+=======
+      rr:parentTriplesMap <#TriplesMapCompany>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
@@ -63,7 +120,12 @@
     rr:predicate ns:places;
     rr:objectMap [
       rml:reference "Places";
+<<<<<<< HEAD
       rr:datatype xsd:integer
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:integer;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
@@ -71,7 +133,12 @@
     rr:predicate ns:longitude;
     rr:objectMap [
       rml:reference "Longitude";
+<<<<<<< HEAD
       rr:datatype xsd:decimal
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:decimal;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
@@ -79,13 +146,21 @@
     rr:predicate ns:latitude;
     rr:objectMap [
       rml:reference "Latitude";
+<<<<<<< HEAD
       rr:datatype xsd:decimal
     ]
   ].
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:decimal;
+    ]
+  ] .
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
 
 <#TriplesMapDirection> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "./csv/-updated.csv" ;
+<<<<<<< HEAD
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -98,6 +173,28 @@
     rr:objectMap [
       rml:reference "StreetCanonized";
       rr:datatype xsd:string
+=======
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/Direction/{DirectionCanonized}";
+    rr:termType rr:IRI; rr:class ns:Direction;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "Direction";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ns:hasStreet;
+    rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapStreet>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
@@ -105,21 +202,34 @@
     rr:predicate ns:number;
     rr:objectMap [
       rml:reference "Number";
+<<<<<<< HEAD
       rr:datatype xsd:integer
+=======
+      rr:termType rr:Literal;
+      rr:datatype xsd:integer;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ];
 
   rr:predicateObjectMap [
+<<<<<<< HEAD
     rr:predicate ns:directionBelongsHood;
     rr:objectMap [
       rr:parentTriplesMap <#TriplesMapHood>
     ];
 
+=======
+    rr:predicate ns:directionBelongsNeighbourhood;
+    rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapHood>;
+    ]
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
   ].
 
 <#TriplesMapHood> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "./csv/-updated.csv" ;
+<<<<<<< HEAD
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -138,12 +248,35 @@ rr:predicateObjectMap [
     rr:predicate ns:hoodBelongsDistrict;
     rr:objectMap [
       rr:parentTriplesMap <#TriplesMapDistrict>
+=======
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/Neighbourhood/{HoodCanonized}";
+    rr:termType rr:IRI; rr:class ns:Neighbourhood;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "HoodLabel";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate ns:neighbourhoodBelongsDistrict;
+    rr:objectMap [
+      rr:parentTriplesMap <#TriplesMapDistrict>;
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
     ]
   ].
 
 <#TriplesMapDistrict> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "./csv/-updated.csv" ;
+<<<<<<< HEAD
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -157,10 +290,28 @@ rr:predicateObjectMap [
       rr:template “same_as_wikidata_distrito”;
       rr:termType rr:IRI ]
     ].
+=======
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/District/{District}";
+    rr:termType rr:IRI; rr:class ns:District;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "DistrictLabel";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+  ].
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
 
 <#TriplesMapCompany> a rr:TriplesMap;
   rml:logicalSource [
     rml:source "./csv/-updated.csv" ;
+<<<<<<< HEAD
     rml:referenceFormulation ql:CSV
   ];
   rr:subjectMap [
@@ -174,3 +325,39 @@ rr:predicateObjectMap [
       rr:template “same_as_wikidata_company”;
       rr:termType rr:IRI ]
     ].
+=======
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/Company/{Company}";
+    rr:termType rr:IRI; rr:class ns:Company;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "Company";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+  ].
+
+  <#TriplesMapStreet> a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "./csv/-updated.csv" ;
+    rml:referenceFormulation ql:CSV;
+  ];
+  rr:subjectMap [
+    rr:template "http://smartcity.linkeddata.es/lcc/resource/Street/{StreetCanonized}";
+    rr:termType rr:IRI; rr:class ns:Street;
+  ];
+
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+      rml:reference "Street";
+      rr:termType rr:Literal;
+      rr:datatype xsd:string;
+    ]
+  ].
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3

@@ -4838,5 +4838,60 @@
     "newColumnName": "same_as_wikidata_street",
     "columnInsertIndex": 8,
     "description": "Create column same_as_wikidata_street at index 8 based on column Street using expression grel:\"https://www.wikidata.org/wiki/\"+cell.recon.match.id"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "District",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "District_ID",
+    "columnInsertIndex": 3,
+    "description": "Create column District_ID at index 3 based on column District using expression grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Hood",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Hood_ID",
+    "columnInsertIndex": 7,
+    "description": "Create column Hood_ID at index 7 based on column Hood using expression grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Street",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Street_ID",
+    "columnInsertIndex": 11,
+    "description": "Create column Street_ID at index 11 based on column Street using expression grel:cell.recon.match.id"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Company",
+    "expression": "grel:cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "Company_ID",
+    "columnInsertIndex": 18,
+    "description": "Create column Company_ID at index 18 based on column Company using expression grel:cell.recon.match.id"
+>>>>>>> 21701d552e4bb06f81ddf105720f5763e836a9f3
   }
 ]
